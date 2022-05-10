@@ -4,6 +4,7 @@ require_relative 'application'
 # Initialize the Rails application.
 Rails.application.initialize!
 
+config.action_mailer.default_url_options = { :host => 'devisedemo.herokuapp.com' }
 ActionMailer::Base.delivery_method = :smtp
 ActionMailer::Base.perform_deliveries = true
 ActionMailer::Base.smtp_settings = {
